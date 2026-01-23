@@ -3,10 +3,10 @@ import type {ContentItem as ContentItemType} from '../../types/api';
 import styled from 'styled-components';
 
 const ItemContainer = styled.div`
-  border: 1px solid #e0e0e0;
+  border: 1px solid #000000;
   border-radius: 8px;
   overflow: hidden;
-  background: white;
+  background: #000000;
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
@@ -29,13 +29,13 @@ const ItemTitle = styled.h3`
   margin: 0 0 8px 0;
   font-size: 16px;
   font-weight: 600;
-  color: #333;
+  color: #f0f0f0;
 `;
 
 const ItemUserName = styled.p`
-  margin: 0 0 8px 0;
-  font-size: 14px;
-  color: #666;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #8c8b8b;
 `;
 
 const ItemPricing = styled.div`
@@ -70,7 +70,7 @@ const PricingOption = styled.span<{ option: string }>`
 const Price = styled.span`
   font-size: 16px;
   font-weight: 600;
-  color: #1976d2;
+  color: #ffffff;
 `;
 
 interface ContentItemProps {

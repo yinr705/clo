@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 const ResetButtonStyled = styled.button`
   padding: 10px 20px;
-  background: #dc3545;
-  color: white;
+  background: #00ff00;
+  color: #000000;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -14,7 +14,7 @@ const ResetButtonStyled = styled.button`
   margin-left: 20px;
 
   &:hover {
-    background: #c82333;
+    background: #00ff00;
   }
 
   &:focus {

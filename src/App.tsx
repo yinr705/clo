@@ -31,11 +31,11 @@ const Header = styled.header`
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #000000;
 `;
 
 const Title = styled.h1`
-  color: #333;
+  color: #00ff00;
   margin: 0;
 `;
 
@@ -53,7 +53,7 @@ const Sidebar = styled.aside`
   position: sticky;
   top: 20px;
   height: fit-content;
-  background: white;  
+  background: #000000;  
 `;
 
 const MainContent = styled.main`
@@ -100,7 +100,7 @@ const App: React.FC = () => {
             <FiltersContainer>
                 <Sidebar>
                     <FilterHeader>
-                        <h2>Filters</h2>
+                        <h2 style={{color: '#00ff00'}}>Filters</h2>
                         <ResetButton />
                     </FilterHeader>
 
@@ -123,7 +123,7 @@ const App: React.FC = () => {
                         </ContentGrid>
                     ) : (
                         <>
-                            <div style={{ marginBottom: '20px', color: '#666' }}>
+                            <div style={{ marginBottom: '20px', color: '#f0f0f0' }}>
                                 Showing {visibleContent.length} of {filteredItems.length} items
                             </div>
 
@@ -134,7 +134,7 @@ const App: React.FC = () => {
                             </ContentGrid>
 
                             {visibleContent.length < filteredItems.length && (
-                                <div style={{ textAlign: 'center', padding: '20px', color: '#666' }}>
+                                <div style={{ textAlign: 'center', padding: '20px', color: '#f0f0f0' }}>
                                     Scroll down to load more items...
                                 </div>
                             )}

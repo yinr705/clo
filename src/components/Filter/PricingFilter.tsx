@@ -6,14 +6,14 @@ import styled from 'styled-components';
 
 const FilterContainer = styled.div`
   padding: 20px;
-  background: #f5f5f5;
+  background: #000000;
   border-radius: 8px;
   margin-bottom: 20px;
 `;
 
 const FilterTitle = styled.h3`
   margin-bottom: 15px;
-  color: #333;
+  color: #f0f0f0;
 `;
 
 const CheckboxGroup = styled.div`
@@ -28,6 +28,7 @@ const CheckboxLabel = styled.label`
   gap: 8px;
   cursor: pointer;
   font-size: 14px;
+  color: #f0f0f0;
 
   input[type="checkbox"] {
     width: 16px;

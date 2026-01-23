@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SliderContainer = styled.div<{ disabled: boolean }>`
   padding: 20px;
-  background: #f5f5f5;
+  background: #000000;
   border-radius: 8px;
   margin-bottom: 20px;
   opacity: ${props => props.disabled ? 0.5 : 1};
@@ -15,6 +15,7 @@ const SliderLabels = styled.div`
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 14px;
+  color: #f0f0f0;
 `;
 
 const SliderInput = styled.input`
@@ -29,7 +30,7 @@ const SliderInput = styled.input`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #007bff;
+    background: #00ff00;
     cursor: pointer;
   }
 
@@ -37,7 +38,7 @@ const SliderInput = styled.input`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #007bff;
+    background: #00ff00;
     cursor: pointer;
     border: none;
   }
