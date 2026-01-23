@@ -53,6 +53,7 @@ const Sidebar = styled.aside`
   position: sticky;
   top: 20px;
   height: fit-content;
+  background: white;  
 `;
 
 const MainContent = styled.main`
