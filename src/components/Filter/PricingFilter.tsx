@@ -5,20 +5,21 @@ import { togglePricingOption } from '../../store/slices/filterSlice';
 import styled from 'styled-components';
 
 const FilterContainer = styled.div`
-  padding: 20px;
   background: #000000;
   border-radius: 8px;
-  margin-bottom: 20px;
+  display: flex;
 `;
 
 const FilterTitle = styled.h3`
   margin-bottom: 15px;
   color: #f0f0f0;
+  font-size: 14px;
+  margin-right: 20px;
 `;
 
 const CheckboxGroup = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 `;
 

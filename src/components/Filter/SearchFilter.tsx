@@ -5,14 +5,12 @@ import { setSearchKeyword } from '../../store/slices/filterSlice';
 import styled from 'styled-components';
 
 const SearchContainer = styled.div`
-  padding: 20px;
   background: #000000;
   border-radius: 8px;
-  margin-bottom: 20px;
 `;
 
 const SearchInput = styled.input`
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #f0f0f0;
   border-radius: 4px;

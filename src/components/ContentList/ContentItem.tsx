@@ -22,14 +22,21 @@ const ItemImage = styled.img`
 `;
 
 const ItemContent = styled.div`
-  padding: 15px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start
+`;
+
+const ItemContentLeft = styled.div`
+  
 `;
 
 const ItemTitle = styled.h3`
-  margin: 0 0 8px 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #f0f0f0;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #b1b0b0;
 `;
 
 const ItemUserName = styled.p`
@@ -44,31 +51,14 @@ const ItemPricing = styled.div`
   align-items: center;
 `;
 
-const PricingOption = styled.span<{ option: string }>`
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+const Option = styled.span`
+  font-size: 22px;
   font-weight: 600;
-  background: ${props => {
-    switch (props.option) {
-        case 'Paid': return '#e3f2fd';
-        case 'Free': return '#e8f5e8';
-        case 'View Only': return '#fff3e0';
-        default: return '#f5f5f5';
-    }
-}};
-  color: ${props => {
-    switch (props.option) {
-        case 'Paid': return '#1976d2';
-        case 'Free': return '#388e3c';
-        case 'View Only': return '#f57c00';
-        default: return '#666';
-    }
-}};
+  color: #ffffff;
 `;
 
 const Price = styled.span`
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
   color: #ffffff;
 `;
@@ -82,12 +72,14 @@ const ContentItem: React.FC<ContentItemProps> = ({ item }) => {
         <ItemContainer>
             <ItemImage src={item.imagePath} alt={item.title} />
             <ItemContent>
-                <ItemTitle>{item.title}</ItemTitle>
-                <ItemUserName>By {item.creator}</ItemUserName>
+                <ItemContentLeft>
+                    <ItemTitle>{item.title}</ItemTitle>
+                    <ItemUserName>By {item.creator}</ItemUserName>
+                </ItemContentLeft>
                 <ItemPricing>
-                    <PricingOption option={item.pricingOption}>
-                        {item.pricingOption}
-                    </PricingOption>
+                    {item.pricingOption !== 'Paid' && (
+                        <Option>{item.pricingOption}</Option>
+                    )}
                     {item.pricingOption === 'Paid' && item.price && (
                         <Price>${item.price}</Price>
                     )}

@@ -22,16 +22,15 @@ import {setPriceRange} from "./store/slices/filterSlice.ts";
 const AppContainer = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 `;
 
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
   border-bottom: 2px solid #000000;
+  padding-top: 20px;
 `;
 
 const Title = styled.h1`
@@ -40,18 +39,18 @@ const Title = styled.h1`
 `;
 
 const FiltersContainer = styled.div`
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 30px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+  //display: grid;
+  //grid-template-columns: 300px 1fr;
+  //gap: 30px;
+  //
+  //@media (max-width: 768px) {
+  //  grid-template-columns: 1fr;
+  //}
 `;
 
 const Sidebar = styled.aside`
   position: sticky;
-  top: 20px;
+  top: 0;
   height: fit-content;
   background: #000000;  
 `;
@@ -64,7 +63,6 @@ const FilterHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 `;
 
 const App: React.FC = () => {
@@ -93,12 +91,11 @@ const App: React.FC = () => {
 
     return (
         <AppContainer>
-            <Header>
-                <Title>CLO-SET CONNECT Store</Title>
-            </Header>
-
             <FiltersContainer>
                 <Sidebar>
+                    <Header>
+                        <Title>CLO-SET CONNECT Store</Title>
+                    </Header>
                     <FilterHeader>
                         <h2 style={{color: '#00ff00'}}>Filters</h2>
                         <ResetButton />

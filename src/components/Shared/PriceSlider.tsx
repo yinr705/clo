@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SliderContainer = styled.div<{ disabled: boolean }>`
-  padding: 20px;
   background: #000000;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   opacity: ${props => props.disabled ? 0.5 : 1};
   pointer-events: ${props => props.disabled ? 'none' : 'all'};
 `;

@@ -5,10 +5,9 @@ import { setSortBy } from '../../store/slices/filterSlice';
 import styled from 'styled-components';
 
 const SortContainer = styled.div`
-  padding: 20px;
   background: #000000;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 const SortSelect = styled.select`
