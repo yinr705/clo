@@ -65,6 +65,12 @@ const SortPrice = styled.div`
   align-items: center;
 `;
 
+const ScrollMore = styled.div`
+  text-align: center;
+  padding: 20px;
+  color: #f0f0f0;
+`;
+
 const App: React.FC = () => {
     const dispatch = useDispatch();
     const { items, loading } = useSelector((state: RootState) => state.content);
@@ -122,10 +128,6 @@ const App: React.FC = () => {
                         </ContentGrid>
                     ) : (
                         <>
-                            <div style={{ marginBottom: '20px', color: '#f0f0f0' }}>
-                                Showing {visibleContent.length} of {filteredItems.length} items
-                            </div>
-
                             <ContentGrid>
                                 {visibleContent.map((item) => (
                                     <ContentItem key={item.id} item={item} />
@@ -133,9 +135,9 @@ const App: React.FC = () => {
                             </ContentGrid>
 
                             {visibleContent.length < filteredItems.length && (
-                                <div style={{ textAlign: 'center', padding: '20px', color: '#f0f0f0' }}>
+                                <ScrollMore>
                                     Scroll down to load more items...
-                                </div>
+                                </ScrollMore>
                             )}
                         </>
                     )}
