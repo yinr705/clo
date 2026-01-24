@@ -39,13 +39,7 @@ const Title = styled.h1`
 `;
 
 const FiltersContainer = styled.div`
-  //display: grid;
-  //grid-template-columns: 300px 1fr;
-  //gap: 30px;
-  //
-  //@media (max-width: 768px) {
-  //  grid-template-columns: 1fr;
-  //}
+  width: 100%;
 `;
 
 const Sidebar = styled.aside`
@@ -60,6 +54,12 @@ const MainContent = styled.main`
 `;
 
 const FilterHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const SortPrice = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,14 +103,16 @@ const App: React.FC = () => {
 
                     <SearchFilter />
                     <PricingFilter />
-                    <SortFilter />
-                    <PriceSlider
-                        min={0}
-                        max={999}
-                        values={filters.priceRange}
-                        onChange={(values) => dispatch(setPriceRange(values))}
-                        disabled={!isPaidSelected}
-                    />
+                    <SortPrice>
+                        <SortFilter />
+                        <PriceSlider
+                            min={0}
+                            max={999}
+                            values={filters.priceRange}
+                            onChange={(values) => dispatch(setPriceRange(values))}
+                            disabled={!isPaidSelected}
+                        />
+                    </SortPrice>
                 </Sidebar>
 
                 <MainContent>

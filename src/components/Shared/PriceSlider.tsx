@@ -7,12 +7,13 @@ const SliderContainer = styled.div<{ disabled: boolean }>`
   margin-bottom: 10px;
   opacity: ${props => props.disabled ? 0.5 : 1};
   pointer-events: ${props => props.disabled ? 'none' : 'all'};
+  width: 35%;
 `;
 
 const SliderLabels = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 14px;
   color: #f0f0f0;
 `;

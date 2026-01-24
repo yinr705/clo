@@ -8,6 +8,7 @@ const SortContainer = styled.div`
   background: #000000;
   border-radius: 8px;
   margin-bottom: 10px;
+  width: 35%;
 `;
 
 const SortSelect = styled.select`
